@@ -152,7 +152,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Allow your frontend URL to access the backend
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React dev server
+    "http://localhost:5173",  # React dev server
     "https://your-frontend-vercel.netlify.app",  # deployed frontend
 ]
 
