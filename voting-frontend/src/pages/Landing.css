@@ -1,0 +1,111 @@
+/* General styling for the body to ensure full-page layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+  }
+  
+  /* Main container for the landing page */
+  .landing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(135deg, #1f2a40, #3d5a80); /* A nice gradient background */
+  }
+  
+  /* Content wrapper to center and style the text and buttons */
+  .landing-content {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 4rem 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .landing-content:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Title styling */
+  .landing-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1f2a40;
+  }
+  
+  /* Subtitle styling */
+  .landing-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  /* Container for the call-to-action buttons */
+  .landing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Styling for the buttons (links) */
+  .landing-button {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-button {
+    background-color: #3d5a80;
+    color: #ffffff;
+    border: 2px solid #3d5a80;
+  }
+  
+  .login-button:hover {
+    background-color: #2b3a50;
+    border-color: #2b3a50;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .register-button {
+    background-color: transparent;
+    color: #3d5a80;
+    border: 2px solid #3d5a80;
+  }
+  
+  .register-button:hover {
+    background-color: #3d5a80;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .landing-title {
+      font-size: 2rem;
+    }
+  
+    .landing-subtitle {
+      font-size: 1rem;
+    }
+    
+    .landing-buttons {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }

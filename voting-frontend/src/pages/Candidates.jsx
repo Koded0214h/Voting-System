@@ -22,8 +22,8 @@ export default function Candidates() {
   };
 
   return (
-    <div>
-      <h2>Candidates</h2>
+    <div className="container">
+      <h2 className="page-header">Candidates</h2>
       <ul>
         {candidates.map((c) => (
           <li key={c.id}>

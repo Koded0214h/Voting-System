@@ -58,6 +58,15 @@ class VoteCreateView(generics.CreateAPIView):
 # ------------------------
 class ResultsView(APIView):
     def get(self, request, election_id):
+        try:
+            election = Election.objects.get(id=election_id)
+        except Election.DoesNotExist:
+            return Response({"detail": "Election not found"}, status=404)
+
+        # 🔒 Only show if allowed
+        if not election.show_results:
+            return Response({"detail": "Results are not available yet."}, status=403)
+
         results = (
             Candidate.objects.filter(election_id=election_id)
             .annotate(votes=Count("vote"))

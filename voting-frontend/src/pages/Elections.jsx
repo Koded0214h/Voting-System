@@ -10,8 +10,8 @@ export default function Elections() {
   }, []);
 
   return (
-    <div>
-      <h2>Available Elections</h2>
+    <div className="container">
+      <h2 className="page-header">Available Elections</h2>
       <ul>
         {elections.map((e) => (
           <li key={e.id}>

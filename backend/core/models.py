@@ -10,10 +10,12 @@ class CustomUser(AbstractUser):
 class Election(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
-    active_status = models.BooleanField(default=True)
+    active_status = models.BooleanField(default=True)  # True = voting ongoing
+    show_results = models.BooleanField(default=False)  # Control result visibility
 
     def __str__(self):
         return self.title
+
 
     
 class Candidate(models.Model):
